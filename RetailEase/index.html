@@ -1,1 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RetailEase - AI-Powered Inventory Management for Pharmacies</title>
+    <meta name="description"
+        content="RetailEase helps pharmacies reduce losses from expired medicines, prevent stockouts, and improve profit using AI-powered inventory forecasting.">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-leaf text-green"></i> RetailEase
+            </a>
+            <div class="nav-links">
+                <a href="#problem">Problem</a>
+                <a href="#features">Features</a>
+                <a href="#benefits">Benefits</a>
+                <a href="#pricing">Pricing</a>
+            </div>
+            <div class="nav-actions">
+                <a href="#demo" class="btn btn-primary">Book Demo</a>
+                <button class="hamburger" id="hamburger">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="#problem">Problem</a>
+            <a href="#features">Features</a>
+            <a href="#benefits">Benefits</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#demo" class="btn btn-primary">Book Demo</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="tagline">AI-Powered Inventory Management for Pharmacies</div>
+                <h1>Prevent Expiry Loss.<br>Predict Stockouts.<br><span class="text-gradient">Increase Pharmacy
+                        Profits.</span></h1>
+                <p>RetailEase helps pharmacies reduce losses from expired medicines, prevent stockouts, and improve
+                    profit using AI-powered inventory forecasting and smart alerts.</p>
+                <div class="hero-buttons">
+                    <a href="#demo" class="btn btn-primary btn-lg">Book Free Demo</a>
+                    <a href="#dashboard" class="btn btn-secondary btn-lg">View Dashboard <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="hero-visual" id="dashboard">
+                <div class="dashboard-mockup">
+                    <!-- Dashboard Mockup Header -->
+                    <div class="dash-header">
+                        <div class="dash-dot" style="background: #ff5f56;"></div>
+                        <div class="dash-dot" style="background: #ffbd2e;"></div>
+                        <div class="dash-dot" style="background: #27c93f;"></div>
+                    </div>
+                    <!-- Dashboard Mockup Content -->
+                    <div class="dash-content">
+                        <div class="dash-sidebar">
+                            <div class="skeleton line short"></div>
+                            <div class="skeleton line"></div>
+                            <div class="skeleton line"></div>
+                            <div class="skeleton line"></div>
+                            <div class="skeleton line"></div>
+                        </div>
+                        <div class="dash-main">
+                            <div class="dash-cards">
+                                <div class="dash-card">
+                                    <div class="card-title">Total Revenue</div>
+                                    <div class="card-value counter" data-target="125000">₹0</div>
+                                </div>
+                                <div class="dash-card">
+                                    <div class="card-title">Current Stock Value</div>
+                                    <div class="card-value text-blue counter" data-target="450000">₹0</div>
+                                </div>
+                                <div class="dash-card">
+                                    <div class="card-title">Total Profit</div>
+                                    <div class="card-value text-green counter" data-target="32400">₹0</div>
+                                </div>
+                                <div class="dash-card alert">
+                                    <div class="card-title">Expiry Alerts</div>
+                                    <div class="card-value text-red counter" data-target="12">0</div>
+                                </div>
+                            </div>
+                            <div class="dash-charts">
+                                <div class="dash-chart canvas-container">
+                                    <div class="chart-label">Sales Trend (30 Days)</div>
+                                    <canvas id="salesChart"></canvas>
+                                </div>
+                                <div class="dash-chart canvas-container">
+                                    <div class="chart-label">Category Distribution (Sold Items)</div>
+                                    <canvas id="categoryChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem section" id="problem">
+        <div class="container">
+            <div class="section-header">
+                <h2>The Pharmacy Inventory Nightmare</h2>
+                <p>Running a pharmacy shouldn't mean constantly battling stock issues.</p>
+            </div>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <div class="icon-box red"><i class="fa-solid fa-prescription-bottle-medical"></i></div>
+                    <h3>Medicines Expire Unnoticed</h3>
+                    <p>Thousands of rupees are thrown in the bin simply because expiring medicines weren't identified in
+                        time.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="icon-box orange"><i class="fa-solid fa-box-open"></i></div>
+                    <h3>Sudden Stockouts Lose Sales</h3>
+                    <p>Running out of fast-moving inventory means losing loyal customers to the pharmacy next door.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="icon-box gray"><i class="fa-solid fa-clipboard-list"></i></div>
+                    <h3>Manual Inventory Tracking</h3>
+                    <p>Wasting hours updating spreadsheets or using complicated legacy software that slows down your
+                        staff.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="icon-box red"><i class="fa-solid fa-wallet"></i></div>
+                    <h3>Hidden Profit Leakage</h3>
+                    <p>Overstocking slow-moving items ties up your capital and slowly drains your pharmacy's
+                        profitability.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="features section bg-light" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Smarter Inventory with RetailEase</h2>
+                <p>Our AI-powered platform turns your inventory into your biggest competitive advantage.</p>
+            </div>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="icon-box green"><i class="fa-solid fa-radar"></i></div>
+                    <h3>Real-Time Tracking</h3>
+                    <p>Monitor your entire stock across multiple stores instantly from our centralized dashboard.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon-box red"><i class="fa-solid fa-bell"></i></div>
+                    <h3>Expiry Alert System</h3>
+                    <p>Get automated notifications 30, 60, and 90 days before medicines expire to take proactive action.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon-box blue"><i class="fa-solid fa-brain"></i></div>
+                    <h3>AI Stockout Prediction</h3>
+                    <p>Our algorithms analyze local demand and seasonality to predict when you'll run out of key
+                        medicines.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon-box purple"><i class="fa-solid fa-cart-arrow-down"></i></div>
+                    <h3>Smart Reorder Suggestions</h3>
+                    <p>One-click purchase orders automatically generated based on optimal reorder quantities.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon-box gold"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3>Profit Analytics Dashboard</h3>
+                    <p>Visualize your daily revenue, identify high-margin items, and track your pharmacy's financial
+                        health.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits section" id="benefits">
+        <div class="container">
+            <div class="benefits-wrapper">
+                <div class="benefits-content">
+                    <h2>Why Pharmacies Choose RetailEase</h2>
+                    <ul class="benefit-list">
+                        <li>
+                            <i class="fa-solid fa-check-circle text-green"></i>
+                            <div>
+                                <strong>Reduce Expired Medicine Loss</strong>
+                                <p>Cut wastage by up to 90% with timely alerts and supplier return management.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check-circle text-green"></i>
+                            <div>
+                                <strong>Increase Pharmacy Profit</strong>
+                                <p>Optimize your working capital by stocking what actually sells in your area.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check-circle text-green"></i>
+                            <div>
+                                <strong>Smart AI Insights</strong>
+                                <p>Leverage enterprise-grade machine learning algorithms packaged for small businesses.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check-circle text-green"></i>
+                            <div>
+                                <strong>Easy for Non-Technical Staff</strong>
+                                <p>Intuitive interface requires less than 15 minutes of training for your employees.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check-circle text-green"></i>
+                            <div>
+                                <strong>Affordable SaaS Pricing</strong>
+                                <p>No massive upfront costs or expensive servers. Just a simple monthly subscription.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="benefits-image">
+                    <div class="glass-card">
+                        <div class="stat-row">
+                            <div class="stat-icon"><i class="fa-solid fa-arrow-trend-up"></i></div>
+                            <div class="stat-info">
+                                <h4>Average Profit Increase</h4>
+                                <div class="stat-val text-green">+24%</div>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="stat-row">
+                            <div class="stat-icon"><i class="fa-solid fa-trash-arrow-up"></i></div>
+                            <div class="stat-info">
+                                <h4>Expiry Losses Prevented</h4>
+                                <div class="stat-val text-blue">₹45,000/mo</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing section bg-light" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2>Simple, Transparent Pricing</h2>
+                <p>Invest in your pharmacy's growth with our affordable plans.</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="plan-name">Basic Plan</div>
+                    <div class="plan-price">₹999<span>/month</span></div>
+                    <div class="plan-desc">Per pharmacy location</div>
+                    <ul class="plan-features">
+                        <li><i class="fa-solid fa-check"></i> Real-time inventory tracking</li>
+                        <li><i class="fa-solid fa-check"></i> Basic expiry & low stock alerts</li>
+                        <li><i class="fa-solid fa-check"></i> Standard daily reports</li>
+                        <li class="disabled"><i class="fa-solid fa-times"></i> AI forecasting</li>
+                        <li class="disabled"><i class="fa-solid fa-times"></i> Advanced analytics</li>
+                    </ul>
+                    <a href="#demo" class="btn btn-outline btn-block">Start Free Trial</a>
+                </div>
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="plan-name">Premium Plan</div>
+                    <div class="plan-price">₹1299<span>/month</span></div>
+                    <div class="plan-desc">Per pharmacy location</div>
+                    <ul class="plan-features">
+                        <li><i class="fa-solid fa-check"></i> Real-time inventory tracking</li>
+                        <li><i class="fa-solid fa-check"></i> Smart SMS & Email alerts</li>
+                        <li><i class="fa-solid fa-check"></i> Custom reporting dashboard</li>
+                        <li><i class="fa-solid fa-check"></i> AI stockout forecasting</li>
+                        <li><i class="fa-solid fa-check"></i> Advanced profit analytics</li>
+                    </ul>
+                    <a href="#demo" class="btn btn-primary btn-block">Start Free Demo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials section">
+        <div class="container">
+            <div class="testimonial-card">
+                <i class="fa-solid fa-quote-left quote-icon"></i>
+                <p class="testimonial-text">“RetailEase completely transformed how we manage our pharmacy. Within 3
+                    months, it helped us reduce expired medicines to almost zero and significantly improved our monthly
+                    profit margins.”</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar"><i class="fa-solid fa-user-tie"></i></div>
+                    <div class="author-info">
+                        <strong>Ramesh Kumar</strong>
+                        <span>Owner, City Care Pharmacy</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo CTA Section -->
+    <section class="cta section" id="demo">
+        <div class="container cta-container">
+            <h2>Ready to transform your inventory?</h2>
+            <p>See how much profit your pharmacy can recover. No credit card required, setup in 5 minutes.</p>
+            <form class="demo-form" onsubmit="event.preventDefault(); alert('Demo requested successfully!');">
+                <input type="email" placeholder="Enter your business email" required>
+                <button type="submit" class="btn btn-primary btn-lg">Book Free 5-Minute Demo</button>
+            </form>
+            <p class="cta-guarantee"><i class="fa-solid fa-shield-halved"></i> 14-day free trial • Cancel anytime</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <i class="fa-solid fa-leaf text-green"></i> RetailEase
+                    </a>
+                    <p>AI-powered inventory intelligence for modern pharmacies. Stop guessing, start growing.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Product</h3>
+                    <a href="#features">Features</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#demo">Book a Demo</a>
+                </div>
+                <div class="footer-links">
+                    <h3>Company</h3>
+                    <a href="#">About Us</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="footer-links">
+                    <h3>Contact</h3>
+                    <a href="mailto:hello@retailease.com">hello@retailease.com</a>
+                    <a href="tel:+918688258946">+91 86882 58946</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 RetailEase. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
